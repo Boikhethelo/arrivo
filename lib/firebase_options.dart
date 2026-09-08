@@ -17,17 +17,29 @@ import 'package:flutter/foundation.dart'
 class DefaultFirebaseOptions {
   static FirebaseOptions get currentPlatform {
     if (kIsWeb) {
-      return web;
+      throw UnsupportedError(
+        'DefaultFirebaseOptions have not been configured for web - '
+        'you can reconfigure this by running the FlutterFire CLI again.',
+      );
     }
     switch (defaultTargetPlatform) {
       case TargetPlatform.android:
         return android;
       case TargetPlatform.iOS:
-        return ios;
+        throw UnsupportedError(
+          'DefaultFirebaseOptions have not been configured for ios - '
+          'you can reconfigure this by running the FlutterFire CLI again.',
+        );
       case TargetPlatform.macOS:
-        return macos;
+        throw UnsupportedError(
+          'DefaultFirebaseOptions have not been configured for macos - '
+          'you can reconfigure this by running the FlutterFire CLI again.',
+        );
       case TargetPlatform.windows:
-        return windows;
+        throw UnsupportedError(
+          'DefaultFirebaseOptions have not been configured for windows - '
+          'you can reconfigure this by running the FlutterFire CLI again.',
+        );
       case TargetPlatform.linux:
         throw UnsupportedError(
           'DefaultFirebaseOptions have not been configured for linux - '
@@ -40,46 +52,11 @@ class DefaultFirebaseOptions {
     }
   }
 
-  static const FirebaseOptions web = FirebaseOptions(
-    apiKey: 'AIzaSyC0Vvab1Z80QwKofYhHqo3MGcnh39AKrUc',
-    appId: '1:95137890640:web:07ce85e2ec58f36991ac55',
-    messagingSenderId: '95137890640',
-    projectId: 'arrivo-location-app',
-    authDomain: 'arrivo-location-app.firebaseapp.com',
-    storageBucket: 'arrivo-location-app.firebasestorage.app',
-  );
-
   static const FirebaseOptions android = FirebaseOptions(
     apiKey: 'AIzaSyAOwKlhFpzLidu2gvVL7aOyKcDzFJPoaB8',
     appId: '1:95137890640:android:0325a6caae654c0a91ac55',
     messagingSenderId: '95137890640',
     projectId: 'arrivo-location-app',
-    storageBucket: 'arrivo-location-app.firebasestorage.app',
-  );
-  static const FirebaseOptions ios = FirebaseOptions(
-    apiKey: 'AIzaSyAzVMHBbPlRVe0lFUxFvn0Uo54OEATkAWw',
-    appId: '1:95137890640:ios:e2513fb540b4441291ac55',
-    messagingSenderId: '95137890640',
-    projectId: 'arrivo-location-app',
-    storageBucket: 'arrivo-location-app.firebasestorage.app',
-    iosBundleId: 'com.example.arrivo',
-  );
-
-  static const FirebaseOptions macos = FirebaseOptions(
-    apiKey: 'AIzaSyAzVMHBbPlRVe0lFUxFvn0Uo54OEATkAWw',
-    appId: '1:95137890640:ios:e2513fb540b4441291ac55',
-    messagingSenderId: '95137890640',
-    projectId: 'arrivo-location-app',
-    storageBucket: 'arrivo-location-app.firebasestorage.app',
-    iosBundleId: 'com.example.arrivo',
-  );
-
-  static const FirebaseOptions windows = FirebaseOptions(
-    apiKey: 'AIzaSyC0Vvab1Z80QwKofYhHqo3MGcnh39AKrUc',
-    appId: '1:95137890640:web:b268c8078ea8cce291ac55',
-    messagingSenderId: '95137890640',
-    projectId: 'arrivo-location-app',
-    authDomain: 'arrivo-location-app.firebaseapp.com',
     storageBucket: 'arrivo-location-app.firebasestorage.app',
   );
 }
