@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "95137890640",
+    "project_id": "arrivo-location-app",
+    "storage_bucket": "arrivo-location-app.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:95137890640:android:0325a6caae654c0a91ac55",
+        "android_client_info": {
+          "package_name": "com.example.arrivo"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAOwKlhFpzLidu2gvVL7aOyKcDzFJPoaB8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
